@@ -168,3 +168,24 @@ function multiplicar() {
     let res = num1.value * num2.value;
     resultado.value = res;
 }
+
+/* ---------- CLASE PERSONA ---------- */
+class Persona {
+    constructor(nombre, apellido) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    getNombreCompleto() {
+        return this.nombre + " " + this.apellido;
+    }
+}
+
+function registrar() {
+    let nombre = document.getElementById("nombre").value;
+    let apellido = document.getElementById("apellido").value;
+
+    const persona = new Persona(nombre, apellido);
+    document.getElementById("nombreCompleto").value =
+        persona.getNombreCompleto();
+}
