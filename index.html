@@ -7,6 +7,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+     margin: 0;
+    overflow-x: hidden;  /* ❗ Evita que se desborde horizontalmente */
 }
 
 /* Encabezado */
@@ -91,6 +93,32 @@ footer {
 .formulario:first-of-type {
     border-right: 7px solid green;
     padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        text-align: center;
+    }
+
+    .formulario {
+        width: 100%;
+        border-right: none;
+        border-bottom: 5px solid green;
+        margin-bottom: 20px;
+    }
+
+    .img-header {
+        position: static;
+        transform: none;
+        display: block;
+        margin: 10px auto;
+    }
 }
 
     </style>
